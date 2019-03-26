@@ -364,7 +364,7 @@
 
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 64 //255     // Limits current to nozzle while in bang-bang mode; 255=full current
+#define BANG_MAX 255     // Limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 #if ENABLED(PIDTEMP)
@@ -379,10 +379,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  //CHINESE E3D AFTER TUNING
-  #define DEFAULT_Kp 27.43
-  #define DEFAULT_Ki 3.28
-  #define DEFAULT_Kd 57.30
+  //CHINESE E3D AFTER TUNING FOR 24V HEATER
+  #define DEFAULT_Kp 24.40
+  #define DEFAULT_Ki 3.01
+  #define DEFAULT_Kd 49.48
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -441,10 +441,10 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
   
-  // mENDELmAX 2.0 24v into 4mm borosilicate
-  #define  DEFAULT_bedKp 157.88
-  #define  DEFAULT_bedKi 10.31
-  #define  DEFAULT_bedKd 604.65
+  // mENDELmAX 2.0 24v into 4mm borosilicate steel top
+  #define DEFAULT_bedKp 58.72
+  #define DEFAULT_bedKi 3.38
+  #define DEFAULT_bedKd 254.83
   
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
